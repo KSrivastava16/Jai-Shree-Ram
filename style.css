@@ -53,6 +53,7 @@ img {
   margin-left: 140px;
   margin-top: 40px;
   float: left;
+  border: 30px solid red;
 }
 /* #imgdiv {
   background: #fcd307;
@@ -71,30 +72,34 @@ p {
   margin-top: 30px;
   margin-top: 40px;
   border-radius: 40px;
+  padding: 5px;
 }
 
 form {
   margin-top: 500px;
-  background: #fcd307;
+  background: #facf5a;
   margin-right: 490px;
   width: 50%;
   font-size: 20px;
   font-weight: bolder;
-  padding: 20px;
+  padding: 10px;
+  border: 2px dotted;
+  border-radius: 40px;
 }
 form input[type="text"] {
   border-radius: 30px;
   height: 40px;
   width: 300px;
   margin-left: 40px;
+  font-size: 15px;
 }
 
 form input[type="submit"] {
   border-radius: 15px;
-  height: 40px;
+  height: 50px;
   width: 300px;
-  background: #00bd56;
-  font-size: 15px;
+  background: #f69314;
+  font-size: 20px;
   color: #c40b13;
   font-weight: bold;
 }

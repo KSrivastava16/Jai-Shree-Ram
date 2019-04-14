@@ -8,54 +8,65 @@ const musicg = document.querySelector("i#g");
 
 let music = new Audio("Side - A.mp3");
 
-musica.addEventListener("click", function() {
-  music.pause();
-  music = new Audio("Side - A.mp3");
-  music.play();
-  console.log("hello World");
-  const parent = musica.parentElement;
-  parent.style.backgroundColor = "#00bd56";
-});
+musica.addEventListener("click", playmusic);
 
-musicb.addEventListener("click", function() {
-  music.pause();
-  music = new Audio("Side - B.mp3 ");
-  music.play();
-  const parent = musicb.parentElement;
-  parent.style.backgroundColor = "#00bd56 ";
-});
+musicb.addEventListener("click", playmusic);
 
-musicc.addEventListener("click", function() {
-  music.pause();
-  music = new Audio("Dashrath Ke ghar Janme Ram.mp3");
-  music.play();
-  musicc.parentElement.style.backgroundColor = "#00bd56";
-});
+musicc.addEventListener("click", playmusic);
 
-musicd.addEventListener("click", function() {
-  music.pause();
-  music = new Audio("BAJRANG BAAN.mp3");
-  music.play();
-  musicd.parentElement.style.backgroundColor = "#00bd56";
-});
+musicd.addEventListener("click", playmusic);
 
-musice.addEventListener("click", function() {
-  music.pause();
-  music = new Audio("MANGAL MOORTI NANDAN.mp3");
-  music.play();
-  musice.parentElement.style.backgroundColor = "#00bd56";
-});
+musice.addEventListener("click", playmusic);
 
-musicf.addEventListener("click", function() {
-  music.pause();
-  music = new Audio("HE BAJRANG BALI HANUMAN.mp3");
-  music.play();
-  musicf.parentElement.style.backgroundColor = "#00bd56";
-});
+musicf.addEventListener("click", playmusic);
 
-musicg.addEventListener("click", function() {
-  music.pause();
-  music = new Audio("Shri Hanuman Chalisa.mp3");
-  music.play();
-  musicg.parentElement.style.backgroundColor = "#00bd56";
-});
+musicg.addEventListener("click", playmusic);
+
+function playmusic(e) {
+  console.log(e);
+  switch (e.target.id) {
+    case "a":
+      music.pause();
+      music = new Audio("Side - A.mp3");
+      music.play();
+      musica.parentElement.style.backgroundColor = "#00bd56";
+      break;
+    case "b":
+      music.pause();
+      music = new Audio("Side - B.mp3 ");
+      music.play();
+      const parent = musicb.parentElement;
+      parent.style.backgroundColor = "#00bd56 ";
+      break;
+    case "c":
+      music.pause();
+      music = new Audio("Dashrath Ke ghar Janme Ram.mp3");
+      music.play();
+      musicc.parentElement.style.backgroundColor = "#00bd56";
+      break;
+    case "d":
+      music.pause();
+      music = new Audio("BAJRANG BAAN.mp3");
+      music.play();
+      musicd.parentElement.style.backgroundColor = "#00bd56";
+      break;
+    case "e":
+      music.pause();
+      music = new Audio("MANGAL MOORTI NANDAN.mp3");
+      music.play();
+      musice.parentElement.style.backgroundColor = "#00bd56";
+      break;
+    case "f":
+      music.pause();
+      music = new Audio("HE BAJRANG BALI HANUMAN.mp3");
+      music.play();
+      musicf.parentElement.style.backgroundColor = "#00bd56";
+      break;
+    case "g":
+      music.pause();
+      music = new Audio("Shri Hanuman Chalisa.mp3");
+      music.play();
+      musicg.parentElement.style.backgroundColor = "#00bd56";
+      break;
+  }
+}
